@@ -5,10 +5,13 @@ Terraform module which is an example.
 
 ## Usage
 ```hcl
-module "example" {
-  source        = "github.com/sncs-uk/example-module"
-  parameter     = "value"
-  do_something  = true
+module "hardware_switch" {
+  source        = "github.com/sncs-uk/terraform-fortigate-hardware-switch"
+  name          = "hw-switch-1"
+  ports         = ["port1", "port2"]
+  vdom          = "root"
+  ip_addresses  = "172.16.0.1/24"
+  allowaccess   = "ping https"
 }
 ```
 
@@ -16,10 +19,9 @@ module "example" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
-| <a name="requirement_example"></a> [example](#requirement\_example) | >= 1.23 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_example"></a> [example](#provider\_example) | >= 1.23 |
+| <a name="provider_fortios"></a> [fortios](#provider\_fortios) | >= 1.22.0 |
