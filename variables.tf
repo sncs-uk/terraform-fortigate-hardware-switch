@@ -18,7 +18,7 @@ variable vdom {
 variable ip_addresses {
   type        = list(string)
   description = "The IP address to assign to this switch, in CIDR format"
-  default     = [""]
+  default     = []
 }
 
 variable allowaccess {
