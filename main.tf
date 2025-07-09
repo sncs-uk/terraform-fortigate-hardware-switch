@@ -27,6 +27,11 @@ resource fortios_system_virtualswitch vsw {
 
 resource fortios_system_interface port {
   depends_on    = [ fortios_system_virtualswitch.vsw ]
+
+  lifecycle {
+    ignore_changes = [ cli_conn_status, ipv6[0].cli_conn6_status ]
+  }
+
   name          = var.name
   ip            = var.ipv4
   vdom          = var.vdom
