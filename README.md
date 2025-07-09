@@ -1,27 +1,41 @@
-# Example Terraform module
+<!-- BEGIN_TF_DOCS -->
+# Fortigate Hardware Switch module
 
-Terraform module which is an example.
-
-
-## Usage
-```hcl
-module "hardware_switch" {
-  source        = "github.com/sncs-uk/terraform-fortigate-hardware-switch"
-  name          = "hw-switch-1"
-  ports         = ["port1", "port2"]
-  vdom          = "root"
-  ip_addresses  = "172.16.0.1/24"
-  allowaccess   = "ping https"
-}
-```
+This terraform module creates a hardware switch on a FortiGate appliance.
 
 ## Requirements
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.0 |
+
+No requirements.
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_fortios"></a> [fortios](#provider\_fortios) | >= 1.22.0 |
+| <a name="provider_fortios"></a> [fortios](#provider\_fortios) | n/a |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [fortios_system_interface.port](https://registry.terraform.io/providers/fortinetdev/fortios/latest/docs/resources/system_interface) | resource |
+| [fortios_system_virtualswitch.vsw](https://registry.terraform.io/providers/fortinetdev/fortios/latest/docs/resources/system_virtualswitch) | resource |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_allowaccess"></a> [allowaccess](#input\_allowaccess) | Management access allowed on this switch | `string` | `"ping"` | no |
+| <a name="input_ipv4"></a> [ipv4](#input\_ipv4) | The IPv4 address to assign to this switch, in CIDR format | `string` | `null` | no |
+| <a name="input_ipv6"></a> [ipv6](#input\_ipv6) | The IPv6 address to assign to this switch, in CIDR format | `string` | `null` | no |
+| <a name="input_name"></a> [name](#input\_name) | The name of the hardware switch | `string` | n/a | yes |
+| <a name="input_ports"></a> [ports](#input\_ports) | A list of ports to assign to this switch | `list(string)` | `[]` | no |
+| <a name="input_vdom"></a> [vdom](#input\_vdom) | The VDOM to which to assign this switch | `string` | `"root"` | no |
+
+## Outputs
+
+No outputs.
+<!-- END_TF_DOCS -->

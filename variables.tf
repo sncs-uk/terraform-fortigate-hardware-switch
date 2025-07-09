@@ -15,10 +15,16 @@ variable vdom {
   default     = "root"
 }
 
-variable ip_addresses {
-  type        = list(string)
-  description = "The IP address to assign to this switch, in CIDR format"
-  default     = []
+variable ipv4 {
+  type        = string
+  description = "The IPv4 address to assign to this switch, in CIDR format"
+  default     = null
+}
+
+variable ipv6 {
+  type        = string
+  description = "The IPv6 address to assign to this switch, in CIDR format"
+  default     = null
 }
 
 variable allowaccess {
