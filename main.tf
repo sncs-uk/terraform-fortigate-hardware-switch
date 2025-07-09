@@ -37,6 +37,7 @@ resource fortios_system_interface port {
     content {
       ip6_mode      = "static"
       ip6_address   = ipv6.value
+      ip6_allowaccess = var.allowaccess6
     }
   }
 }
