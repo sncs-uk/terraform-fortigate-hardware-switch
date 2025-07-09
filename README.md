@@ -28,7 +28,8 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_allowaccess"></a> [allowaccess](#input\_allowaccess) | Management access allowed on this switch | `string` | `"ping"` | no |
+| <a name="input_allowaccess"></a> [allowaccess](#input\_allowaccess) | Management access allowed on this switch (IPv4) | `string` | `"ping"` | no |
+| <a name="input_allowaccess6"></a> [allowaccess6](#input\_allowaccess6) | Management access allowed on this switch (IPv6) | `string` | `"ping"` | no |
 | <a name="input_ipv4"></a> [ipv4](#input\_ipv4) | The IPv4 address to assign to this switch, in CIDR format | `string` | `null` | no |
 | <a name="input_ipv6"></a> [ipv6](#input\_ipv6) | The IPv6 address to assign to this switch, in CIDR format | `string` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the hardware switch | `string` | n/a | yes |

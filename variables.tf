@@ -29,6 +29,12 @@ variable ipv6 {
 
 variable allowaccess {
   type        = string
-  description = "Management access allowed on this switch"
+  description = "Management access allowed on this switch (IPv4)"
+  default     = "ping"
+}
+
+variable allowaccess6 {
+  type        = string
+  description = "Management access allowed on this switch (IPv6)"
   default     = "ping"
 }
