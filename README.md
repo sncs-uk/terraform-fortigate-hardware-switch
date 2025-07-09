@@ -34,6 +34,7 @@ No modules.
 | <a name="input_ipv6"></a> [ipv6](#input\_ipv6) | The IPv6 address to assign to this switch, in CIDR format | `string` | `null` | no |
 | <a name="input_name"></a> [name](#input\_name) | The name of the hardware switch | `string` | n/a | yes |
 | <a name="input_ports"></a> [ports](#input\_ports) | A list of ports to assign to this switch | `list(string)` | `[]` | no |
+| <a name="input_role"></a> [role](#input\_role) | Role of the interface | `string` | `null` | no |
 | <a name="input_vdom"></a> [vdom](#input\_vdom) | The VDOM to which to assign this switch | `string` | `"root"` | no |
 
 ## Outputs

@@ -38,3 +38,9 @@ variable allowaccess6 {
   description = "Management access allowed on this switch (IPv6)"
   default     = "ping"
 }
+
+variable role {
+  type        = string
+  description = "Role of the interface"
+  default     = null
+}
